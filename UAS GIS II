@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #map {
+        height: 500px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>UAS GIS 2</h3>
+    <h3>Nama: Zulfian</h3>
+    <h3>Stambuk: 20200302002</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var RumahSaya = {
+          lat: -0.8957507228618212,
+          lng: 119.87232310443497,
+        };
+        var SMKSaya = { lat: -0.8909348108786621, lng: 119.87785593899564 };
+        var waypoint1 = { lat: -0.872022, lng: 119.875029 };
+        var waypoint2 = { lat: -0.872928, lng: 119.874755 };
+        var waypoint3 = { lat: -0.873808, lng: 119.874508 };
+        var waypoint4 = { lat: -0.8749129412641965, lng: 119.87416467641114 };
+        var waypoint5 = { lat: -0.875433, lng: 119.87402 };
+        var waypoint6 = { lat: -0.876232, lng: 119.873779 };
+        var waypoint7 = { lat: -0.877321, lng: 119.873462 };
+        var waypoint8 = { lat: -0.878152, lng: 119.873205 };
+        var waypoint9 = { lat: -0.878675, lng: 119.873026 };
+        var waypoint10 = { lat: -0.87968, lng: 119.872767 };
+        var waypoint11 = { lat: -0.880016, lng: 119.872687 };
+        var waypoint12 = { lat: -0.880338, lng: 119.872671 };
+        var waypoint13 = { lat: -0.880778, lng: 119.875487 };
+        var waypoint14 = { lat: -0.881057, lng: 119.875938 };
+        var waypoint15 = { lat: -0.881604, lng: 119.876539 };
+        var waypoint16 = { lat: -0.882333, lng: 119.877387 };
+        var waypoint17 = { lat: -0.882852, lng: 119.878088 };
+        var waypoint18 = { lat: -0.883178, lng: 119.878518 };
+        var waypoint19 = { lat: -0.883604, lng: 119.878864 };
+        var waypoint20 = { lat: -0.884057, lng: 119.87936 };
+        var waypoint21 = { lat: -0.884644, lng: 119.879263 };
+        var waypoint22 = { lat: -0.884969, lng: 119.87925 };
+        var waypoint23 = { lat: -0.885454, lng: 119.879215 };
+        var waypoint24 = { lat: -0.886063, lng: 119.879121 };
+        var waypoint25 = { lat: -0.886937, lng: 119.878992 };
+        var waypoint26 = { lat: -0.887755, lng: 119.878882 };
+        var waypoint27 = { lat: -0.888675, lng: 119.878708 };
+        var waypoint28 = { lat: -0.889463, lng: 119.878593 };
+        var waypoint29 = { lat: -0.890192, lng: 119.878518 };
+        var waypoint30 = { lat: -0.890238, lng: 119.87844 };
+        var waypoint31 = { lat: -0.891375, lng: 119.878301 };
+
+        var map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 15,
+          center: RumahSaya,
+        });
+        var marker1 = new google.maps.Marker({
+          position: RumahSaya,
+          map: map,
+        });
+        var marker2 = new google.maps.Marker({ position: SMKSaya, map: map });
+
+        var polyline = new google.maps.Polyline({
+          path: [
+            RumahSaya,
+            waypoint1,
+            waypoint2,
+            waypoint3,
+            waypoint4,
+            waypoint5,
+            waypoint6,
+            waypoint7,
+            waypoint8,
+            waypoint9,
+            waypoint10,
+            waypoint11,
+            waypoint12,
+            waypoint13,
+            waypoint14,
+            waypoint15,
+            waypoint16,
+            waypoint17,
+            waypoint18,
+            waypoint19,
+            waypoint20,
+            waypoint21,
+            waypoint22,
+            waypoint23,
+            waypoint24,
+            waypoint25,
+            waypoint26,
+            waypoint27,
+            waypoint28,
+            waypoint29,
+            waypoint30,
+            waypoint31,
+            SMKSaya,
+          ],
+          strokeColor: "green",
+          strokeOpacity: 1.0,
+          strokeWeight: 2,
+        });
+
+        polyline.setMap(map);
+      }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_l4NVUcqs0IEEw7kaz2pg5QIEhg8F9h4&callback=initMap"></script>
+  </body>
+</html>
